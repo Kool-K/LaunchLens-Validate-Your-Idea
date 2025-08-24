@@ -197,10 +197,12 @@ header {
 .search-icon {
   position: absolute;
   left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  /* Adjust icon position for textarea */
+  top: 1rem; 
+  transform: none;
   color: var(--subtle-text-color);
 }
+/* UPDATED styles for the textarea */
 #idea-input {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
@@ -208,7 +210,12 @@ header {
   border: 1px solid var(--glass-border-color);
   border-radius: 0.5rem;
   font-size: 1.125rem;
+  font-family: 'Inter', sans-serif;
   color: var(--text-color);
+  resize: none;
+  overflow-y: hidden;
+  line-height: 1.5;
+  min-height: 58px; /* Set a minimum height */
 }
 #idea-input:focus {
   outline: none;

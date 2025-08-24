@@ -65,7 +65,14 @@ const savedTheme = localStorage.getItem('theme') || 'light';
 applyTheme(savedTheme);
 
 
-// --- 4. SEARCH & DISPLAY LOGIC ---
+// --- 4. AUTO-EXPANDING TEXTAREA LOGIC ---
+ideaInput.addEventListener('input', () => {
+    ideaInput.style.height = 'auto'; // Reset height to recalculate
+    ideaInput.style.height = `${ideaInput.scrollHeight}px`; // Set to content height
+});
+
+
+// --- 5. SEARCH & DISPLAY LOGIC ---
 let loadingInterval;
 
 searchForm.addEventListener('submit', (e) => {
@@ -89,7 +96,7 @@ searchForm.addEventListener('submit', (e) => {
         messageIndex = (messageIndex + 1) % loadingMessages.length;
         loadingText.textContent = loadingMessages[messageIndex];
         updateLoadingDots(messageIndex);
-    }, 1200); // Change message every 1.2 seconds
+    }, 1200);
 
     // Simulate API delay
     setTimeout(() => {
@@ -100,18 +107,20 @@ searchForm.addEventListener('submit', (e) => {
         resultsSection.classList.remove('hidden');
         analyzeButton.disabled = false;
         analyzeButton.querySelector('span').textContent = 'Analyze Idea';
-    }, 1200 * loadingMessages.length); // Wait for all messages to cycle through
+    }, 1200 * loadingMessages.length);
 });
 
 resetButton.addEventListener('click', () => {
     resultsSection.classList.add('hidden');
     heroSection.classList.remove('hidden');
     ideaInput.value = '';
+    // Reset textarea height
+    ideaInput.style.height = 'auto'; 
 });
 
-// --- 5. DYNAMIC CONTENT CREATION ---
+// --- 6. DYNAMIC CONTENT CREATION ---
 function updateLoadingDots(activeIndex) {
-    loadingDotsContainer.innerHTML = ''; // Clear previous dots
+    loadingDotsContainer.innerHTML = '';
     loadingMessages.forEach((_, index) => {
         const dot = document.createElement('div');
         if (index === activeIndex) {
@@ -122,7 +131,6 @@ function updateLoadingDots(activeIndex) {
 }
 
 function populateResults() {
-    // Clear previous results but keep the header
     const oldCategories = resultsSection.querySelectorAll('.results-category');
     oldCategories.forEach(cat => cat.remove());
 
@@ -198,7 +206,6 @@ function createCardHTML(result, category) {
 }
 
 function getIconHTML(iconName) {
-    // CORRECTED SVG code for all icons
     const icons = {
         globe: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
         playStore: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16L18.25 12z"/></svg>`,
