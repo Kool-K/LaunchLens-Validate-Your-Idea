@@ -2,7 +2,7 @@
 
 **A high-fidelity UI/UX prototype for a developer tool that provides instant market analysis and competitor insights for new ideas.**
 
-[View Live Demo](https://your-github-username.github.io/your-repo-name/) <!-- TODO: Replace with your live demo link -->
+[View Live Demo](https://kool-k.github.io/LaunchLens-Validate-Your-Idea/) 
 ---
 
 ## About The Project
@@ -46,9 +46,3 @@ To run this project locally:
     cd your-repo-name
     ```
 3.  Open the `index.html` file in your favorite web browser.
-
-## Contact
-
-Ketaki Kulkarni- [GitHub Profile](https://github.com/Kool-K)
-
-Project Link: [https://github.com/Kool-K/LaunchLens-Validate-Your-Idea.git](https://github.com/Kool-K/LaunchLens-Validate-Your-Idea.git) 
