@@ -46,3 +46,6 @@ To run this project locally:
     cd your-repo-name
     ```
 3.  Open the `index.html` file in your favorite web browser.
+
+## Acknowledgements
+Initial design concepts and component structure were inspired by a layout generated with the Lovable & Dribble , which were then custom-built and re-engineered from the ground up using vanilla HTML, CSS, and JavaScript.
