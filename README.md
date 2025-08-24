@@ -3,9 +3,6 @@
 **A high-fidelity UI/UX prototype for a developer tool that provides instant market analysis and competitor insights for new ideas.**
 
 [View Live Demo](https://your-github-username.github.io/your-repo-name/) <!-- TODO: Replace with your live demo link -->
-
-<!-- TODO: Add a high-quality screenshot of your application -->
-
 ---
 
 ## About The Project
@@ -52,6 +49,6 @@ To run this project locally:
 
 ## Contact
 
-Your Name - [GitHub Profile](https://github.com/your-github-username) <!-- TODO: Replace with your GitHub profile link -->
+Ketaki Kulkarni- [GitHub Profile](https://github.com/Kool-K)
 
-Project Link: [https://github.com/your-github-username/your-repo-name](https://github.com/your-github-username/your-repo-name) <!-- TODO: Replace with your repo link -->
+Project Link: [https://github.com/Kool-K/LaunchLens-Validate-Your-Idea.git](https://github.com/Kool-K/LaunchLens-Validate-Your-Idea.git) 
